@@ -2,7 +2,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const fetch = require('node-fetch');
-const generateMarkdown = require("./utils/generateMarkdown")
+const generateMarkdown = require("./assets/utils/generateMarkdown")
 
 // TODO: Create an array of questions for user input
 const questions = [{
@@ -94,7 +94,7 @@ function renderFetch (data) {
             const licDes = output.description
             console.log(licUrl)
             console.log(licDes)
-            writeToFile("DEMOREADME.md", generateMarkdown(data, licUrl, licDes))
+            writeToFile("./Demo/DEMOREADME.md", generateMarkdown(data, licUrl, licDes))
             return licUrl, licDes
         })
         .catch((err) => {

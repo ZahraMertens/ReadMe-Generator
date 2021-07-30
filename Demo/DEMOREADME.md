@@ -2,8 +2,9 @@
 
 ### d
 
-[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/d/d)
 
 ## Description
 
@@ -26,7 +27,7 @@ The following necessary dependencies must be installed to run the application pr
 ​This application is used for d
 
 ## License
-This project is license under the apache-2.0 license.
+This project is license under the mit license.
 
 ## Contributing
 ​Contributors: d
@@ -36,9 +37,9 @@ To run tests, you need to run the following command: d
 
 ## License
 
-http://choosealicense.com/licenses/apache-2.0/
+http://choosealicense.com/licenses/mit/
 
-A permissive license whose main conditions require preservation of copyright and license notices. Contributors provide an express grant of patent rights. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
+A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
 
 
 ## Questions
