@@ -48,11 +48,27 @@ function renderLicenseBadge(data) {
 /*function renderLicenseSection(data) {
   
 }*/
+function splitInstallation(data){
+  console.log(data.installation)
+
+  const splitString = data.installation.split(", ")
+  console.log(splitString)
+ 
+  var test = ""
+
+  splitString.forEach(function(value){
+    test += `* ${value} <br/>`
+  })
+
+  return test
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data, licUrl, licDes) {
 
   var licenseBadge = renderLicenseBadge(data); 
+  var splitInstall = splitInstallation(data);
+  console.log(splitInstall)
 
   return `
 
@@ -68,20 +84,18 @@ ${data.description}
 ## Table of Contents 
 * [Installation](#installation)
 * [Usage](#usage)
-* [License](#license)
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [License](#license)
-* [Questions](#contact)
+* [Questions](#questions)
 
 ## ➡️ Installation
-The following necessary dependencies must be installed to run the application properly: ${data.installation}
+The following necessary dependencies must be installed to run the application properly: 
+
+${splitInstall}
 
 ## ➡️ Usage
 ​This application is used for ${data.usage}
-
-## ➡️ License
-This project is license under the ${data.license} license.
 
 ## ➡️ Contributing
 ​Contributors: ${data.contribution}
@@ -92,14 +106,14 @@ To run tests, you need to run the following command: ${data.test}
 ## ➡️ License
 
 ${licDes}
-[See Details about the ${data.license}-License: ](${licUrl})
+[See Details about the ${data.license}-License](${licUrl})
 
-## Contact
+## Questions
 
 Please contact me for further Questions:
 
 * [🐈‍ GitHub Profile: ](https://github.com/${data.username})
-* [✉️ Contact via Email: ](mailto:${data.email})
+* [✉️ Click here to contact me via Email](mailto:${data.email})
  
 `;
 }
