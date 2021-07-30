@@ -20,16 +20,16 @@ d
 ## ➡️ Installation
 The following necessary dependencies must be installed to run the application properly: 
 
-* hello<br/> * hello<br/>
+* hello<br/>* hello<br/>
 
 ## ➡️ Usage
-​This application is used for c
+​This application is used for 
 
 ## ➡️ Contributing
-​Contributors: c
+​Contributors: 
 
 ## ➡️ Tests
-To run tests, you need to run the following command: c
+To run tests, you need to run the following command: 
 
 ## ➡️ License
 
