@@ -1,5 +1,6 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
+const Choices = require('inquirer/lib/objects/choices');
 const fetch = require('node-fetch');
 
 
@@ -35,66 +36,29 @@ function renderLicenseBadge(data) {
     }
   }
   
-  /*![GitHub license](https://img.shields.io/badge/license-${data.license}-blue.svg)
-  
-  let licenseString = '';
-  if (licenseType === 'APACHE'){
-    licenseString = `![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)`;
-  }
-  if (licenseType === 'GNU'){
-    licenseString = `![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)`;
-  }
-  if (licenseType === 'IBM'){
-    licenseString = `[![License: IPL 1.0](https://img.shields.io/badge/License-IPL%201.0-blue.svg)](https://opensource.org/licenses/IPL-1.0)`;
-  }
-  if (licenseType === 'MIT'){
-    licenseString = `![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)`;
-  }
-  return licenseString*/
 }
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
 /*function renderLicenseLink(data) {
-
-  const licenseKind = data.license;
-  console.log(licenseKind)
-
-  fetch(`https://api.github.com/licenses/${licenseKind}`)
-   .then(res => res.json())
-   .then(data => {
-            console.log(data);
-            const licUrl = data.html_url
-            console.log(licUrl)
-            return licUrl
-        })
-        .catch((err) => {
-            console.log(err);
-  })
-    
 }*/
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
 /*function renderLicenseSection(data) {
   
- // const licenseLink = data.html_url;
- // const licenseDes = data.licDescription;
- // return licenseLink, licenseDes
 }*/
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data, licUrl, licDes) {
 
-  var licenseBadge = renderLicenseBadge(data);
+  var licenseBadge = renderLicenseBadge(data); 
 
   return `
 
 ### ${data.title}
 
 ${licenseBadge}
-
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://github.com/${data.username}/${data.title})
 
 ## Description
 
@@ -108,7 +72,7 @@ ${data.description}
 * [Contributing](#contributing)
 * [Tests](#tests)
 * [License](#license)
-* [Questions](#questions)
+* [Questions](#contact)
 
 ##  Installation
 The following necessary dependencies must be installed to run the application properly: ${data.installation}
@@ -127,13 +91,17 @@ To run tests, you need to run the following command: ${data.test}
 
 ## License
 
-${licUrl}
+[See Details about the ${data.license}-License: ](${licUrl})
 
 ${licDes}
 
 
-## Questions
-If you have any questions about the repo, open an issue or contact ${data.username} directly ${data.erfmail}.
+## Contact
+
+Please contact me for further Questions:
+
+* [🐈‍⬛ GitHub Profile: ](https://github.com/${data.username})
+* [✉️ Contact via Email: ](mailto:${data.email})
  
 `;
 }
