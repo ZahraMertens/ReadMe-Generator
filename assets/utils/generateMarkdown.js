@@ -56,11 +56,11 @@ function generateMarkdown(data, licUrl, licDes) {
 
   return `
 
-### ${data.title}
+# ${data.title}
 
 ${licenseBadge}
 
-## Description
+## ➡️ Description
 
 ${data.description}
 
@@ -74,33 +74,31 @@ ${data.description}
 * [License](#license)
 * [Questions](#contact)
 
-##  Installation
+## ➡️ Installation
 The following necessary dependencies must be installed to run the application properly: ${data.installation}
 
-## Usage
+## ➡️ Usage
 ​This application is used for ${data.usage}
 
-## License
+## ➡️ License
 This project is license under the ${data.license} license.
 
-## Contributing
+## ➡️ Contributing
 ​Contributors: ${data.contribution}
 
-## Tests
+## ➡️ Tests
 To run tests, you need to run the following command: ${data.test}
 
-## License
-
-[See Details about the ${data.license}-License: ](${licUrl})
+## ➡️ License
 
 ${licDes}
-
+[See Details about the ${data.license}-License: ](${licUrl})
 
 ## Contact
 
 Please contact me for further Questions:
 
-* [🐈‍⬛ GitHub Profile: ](https://github.com/${data.username})
+* [🐈‍ GitHub Profile: ](https://github.com/${data.username})
 * [✉️ Contact via Email: ](mailto:${data.email})
  
 `;
