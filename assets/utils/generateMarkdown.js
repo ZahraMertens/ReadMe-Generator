@@ -34,20 +34,15 @@ function renderLicenseBadge(data) {
       if (licenseType === "apache-2.0") {
         return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
     }
+    case "":
+      if (licenseType === ""){
+        return ""
+      }
   }
   
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-/*function renderLicenseLink(data) {
-}*/
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-/*function renderLicenseSection(data) {
-  
-}*/
 function splitInstallation(data){
   console.log(data.installation)
 
@@ -68,7 +63,6 @@ function generateMarkdown(data, licUrl, licDes) {
 
   var licenseBadge = renderLicenseBadge(data); 
   var splitInstall = splitInstallation(data);
-  console.log(splitInstall)
 
   return `
 
@@ -80,7 +74,6 @@ ${licenseBadge}
 
 ${data.description}
 
-
 ## Table of Contents 
 * [Installation](#installation)
 * [Usage](#usage)
@@ -90,23 +83,30 @@ ${data.description}
 * [Questions](#questions)
 
 ## ➡️ Installation
+
 The following necessary dependencies must be installed to run the application properly: 
 
 ${splitInstall}
 
 ## ➡️ Usage
-​This application is used for ${data.usage}
+​This application is used for:
+
+${data.usage}
 
 ## ➡️ Contributing
-​Contributors: ${data.contribution}
+​Contributors: 
+
+${data.contribution}
 
 ## ➡️ Tests
-To run tests, you need to run the following command: ${data.test}
+To run tests, you need to run the following command:
+
+${data.test}
 
 ## ➡️ License
 
 ${licDes}
-[See Details about the ${data.license}-License](${licUrl})
+[See Details about the ${data.license}-license](${licUrl})
 
 ## Questions
 

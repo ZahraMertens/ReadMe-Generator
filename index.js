@@ -9,41 +9,89 @@ const questions = [{
         type: 'input',
         message: 'What is your GitHub username',
         name: 'username',
+        validate: function (input) {
+            if (input === ""){
+                return "GitHub username must be entered"
+            } 
+            return true
+        }
     },
     {
         type: 'input',
         message: 'What is your emil address?',
         name: 'email',
+        validate: function (input) {
+            if (input === ""){
+                return "Email address must be entered"
+            } 
+            return true
+        }
     },
     {
       type: 'input',
       message: 'What is your project title?',
       name: 'title',
+      validate: function (input) {
+        if (input === ""){
+            return "Title must be entered"
+        } 
+        return true
+    }
     },
     {
       type: 'input',
       message: 'Please enter a describtion of the project:',
       name: 'description',
+      validate: function (input) {
+        if (input === ""){
+            return "Describtion must be entered"
+        } 
+        return true
+    }
     },
     {
       type: 'input',
-      message: 'Enter installation instructions',
+      message: 'Enter installation instructions(Please separate each step by a comma and space (, )',
       name: 'installation',
+      validate: function (input) {
+        if (input === ""){
+            return "Installation Instructions must be entered"
+        } 
+        return true
+    }
     },
     {
         type: 'input',
         message: 'Enter usage information for te project',
         name: 'usage',
+        validate: function (input) {
+            if (input === ""){
+                return "Usage Information must be entered"
+            } 
+            return true
+        }
     },
     {
         type: 'input',
         message: 'Enter contribution guidelines for the project',
         name: 'contribution',
+        validate: function (input) {
+            if (input === ""){
+                return "Contribution Guidelines must be entered"
+            } 
+            return true
+        }
     },
     {
         type: 'input',
         message: 'Enter test intrsuctions for the project',
         name: 'test',
+        validate: function (input) {
+            if (input === ""){
+                return "Test instructions must be entered"
+            } 
+            return true
+        }
     },
     {
         type: "list",
@@ -81,6 +129,10 @@ function init() {
     })
 }
 
+// TODO: Create a function that returns the license section of README
+// If there is no license, return an empty string
+// TODO: Create a function that returns the license link
+// If there is no license, return an empty string
 function renderFetch (data) {
 
     const licenseKind = data.license;
@@ -92,10 +144,12 @@ function renderFetch (data) {
             console.log(output);
             const licUrl = output.html_url
             const licDes = output.description
-            console.log(licUrl)
-            console.log(licDes)
             writeToFile("./Demo/DEMOREADME.md", generateMarkdown(data, licUrl, licDes))
-            return licUrl, licDes
+           
+            if (licUrl === "" && licDes === ""){
+                writeToFile("./Demo/DEMOREADME.md", generateMarkdown(data, "", ""))
+            return ""
+            }
         })
         .catch((err) => {
             console.log(err);
