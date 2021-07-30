@@ -57,7 +57,7 @@ function splitInstallation(data){
   var test = ""
 
   splitString.forEach(function(value){
-    test += `<br/>* ${value} `
+    test += `<br/> * ${value} `
   })
 
   return test.trim()
@@ -91,7 +91,6 @@ ${data.description}
 
 ## ➡️ Installation
 The following necessary dependencies must be installed to run the application properly: 
-
 ${splitInstall}
 
 ## ➡️ Usage

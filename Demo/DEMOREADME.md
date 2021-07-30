@@ -19,8 +19,7 @@ d
 
 ## ➡️ Installation
 The following necessary dependencies must be installed to run the application properly: 
-
-<br/>* hello <br/>* hello
+<br/> * hello <br/> * hello
 
 ## ➡️ Usage
 ​This application is used for d
