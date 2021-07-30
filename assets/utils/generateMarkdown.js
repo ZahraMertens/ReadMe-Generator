@@ -57,7 +57,7 @@ function splitInstallation(data){
   var test = ""
 
   splitString.forEach(function(value){
-    test += `* ${value} <br/>`
+    test += `* ${value} <br/> `
   })
 
   return test
