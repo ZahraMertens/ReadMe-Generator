@@ -57,10 +57,10 @@ function splitInstallation(data){
   var test = ""
 
   splitString.forEach(function(value){
-    test += `* ${value} <br/> `
+    test += `* ${value}<br/> `
   })
 
-  return test
+  return test.trim()
 }
 
 // TODO: Create a function to generate markdown for README
