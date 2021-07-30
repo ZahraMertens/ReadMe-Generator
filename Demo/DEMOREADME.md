@@ -6,7 +6,7 @@
 
 ## ➡️ Description
 
-d
+
 
 
 ## Table of Contents 
@@ -20,16 +20,16 @@ d
 ## ➡️ Installation
 The following necessary dependencies must be installed to run the application properly: 
 
-* hello<br/>* hello<br/>
+* hello <br/> * hello <br/>
 
 ## ➡️ Usage
-​This application is used for 
+​This application is used for c
 
 ## ➡️ Contributing
-​Contributors: 
+​Contributors: c
 
 ## ➡️ Tests
-To run tests, you need to run the following command: 
+To run tests, you need to run the following command: c
 
 ## ➡️ License
 
