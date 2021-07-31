@@ -47,9 +47,11 @@
 ## Mock-Up
 
 The video shows the usage of the code in the terminal to generate a new Readme File:
+
 ![Code-Demo](./assets/Images/code.gif)
 
-The video shows an example of a Readme file generated with the node.js application:
+The video shows an example of a Readme file generated with the node.js application and its features:
+
 ![Deployed-Readme-Demo](./assets/Images/demopage.gif)
 
 ## Credits
