@@ -73,23 +73,23 @@ function generateMarkdown(data, licUrl, licDes) {
 
   return `
 
-# ${data.title}
+# ➡️ ${data.title}
 
 ${licenseBadge}
 
-## Description
+## ➡️ Description
 
 ${data.description}
 
 ## Table of Contents 
-* [Installation](#➡️-installation)
-* [Usage](#➡️-usage-information)
-* [Contributing](#➡️-contribution-guidelines)
-* [Tests](#➡️-test-instructions)
-* [License](#➡️-license)
-* [Questions](#➡️-questions)
+* [Installation](#installation)
+* [Usage](#usage-information)
+* [Contributing](#contribution-guidelines)
+* [Tests](#test-instructions)
+* [License](#license)
+* [Questions](#questions)
 
-## ➡️ Installation
+## Installation
 
 [🐈‍ GitHub Repository](https://github.com/${trimName}/${trimRepo})
 
@@ -97,25 +97,25 @@ The following necessary dependencies must be installed to run the application pr
 
 ${splitInstall}
 
-## ➡️ Usage Information
+## Usage Information
 
 ${data.usage}
 
-## ➡️ Contribution-Guidelines
+## Contribution-Guidelines
 
 ${data.contribution}
 
-## ➡️ Test Instructions
+## Test Instructions
 To run tests, you need to run the following command:
 
 ${data.test}
 
-## ➡️ License
+## License
 
 ${licDes}
 [See Details about the ${data.license}-license](${licUrl})
 
-## ➡️ Questions
+## Questions
 
 Please contact me for further Questions:
 

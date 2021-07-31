@@ -1,22 +1,22 @@
 
 
-# d
+# ➡️ d
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Description
+## ➡️ Description
 
 d
 
 ## Table of Contents 
-* [Installation](#➡️-installation)
-* [Usage](#➡️-usage-information)
-* [Contributing](#➡️-contribution-guidelines)
-* [Tests](#➡️-test-instructions)
-* [License](#➡️-license)
-* [Questions](#➡️-questions)
+* [Installation](#installation)
+* [Usage](#usage-information)
+* [Contributing](#contribution-guidelines)
+* [Tests](#test-instructions)
+* [License](#license)
+* [Questions](#questions)
 
-## ➡️ Installation
+## Installation
 
 [🐈‍ GitHub Repository](https://github.com/d/d)
 
@@ -24,25 +24,25 @@ The following necessary dependencies must be installed to run the application pr
 
 * d
 
-## ➡️ Usage Information
+## Usage Information
 
 d
 
-## ➡️ Contribution-Guidelines
+## Contribution-Guidelines
 
 d
 
-## ➡️ Test Instructions
+## Test Instructions
 To run tests, you need to run the following command:
 
 d
 
-## ➡️ License
+## License
 
 A short and simple permissive license with conditions only requiring preservation of copyright and license notices. Licensed works, modifications, and larger works may be distributed under different terms and without source code.
 [See Details about the mit-license](http://choosealicense.com/licenses/mit/)
 
-## ➡️ Questions
+## Questions
 
 Please contact me for further Questions:
 
