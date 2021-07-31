@@ -64,41 +64,48 @@ function generateMarkdown(data, licUrl, licDes) {
   var licenseBadge = renderLicenseBadge(data); 
   var splitInstall = splitInstallation(data);
 
+  var trimName = data.username.trim();
+  var trimEmail = data.email.trim();
+  var trimRepo = data.repo.trim();
+
+  console.log(`"${trimName}"`)
+  console.log(`"${trimEmail}"`)
+
   return `
 
 # ${data.title}
 
 ${licenseBadge}
 
-## ➡️ Description
+## Description
 
 ${data.description}
 
 ## Table of Contents 
-* [Installation](#installation)
-* [Usage](#usage)
-* [Contributing](#contributing)
-* [Tests](#tests)
-* [License](#license)
-* [Questions](#questions)
+* [Installation](#➡️-installation)
+* [Usage](#➡️-usage-information)
+* [Contributing](#➡️-contribution-guidelines)
+* [Tests](#➡️-test-instructions)
+* [License](#➡️-license)
+* [Questions](#➡️-questions)
 
 ## ➡️ Installation
 
-[🐈‍ GitHub Repository: ](https://github.com/${data.username}/${data.repo})
+[🐈‍ GitHub Repository](https://github.com/${trimName}/${trimRepo})
 
 The following necessary dependencies must be installed to run the application properly: 
 
 ${splitInstall}
 
-## ➡️ Usage
+## ➡️ Usage Information
 
 ${data.usage}
 
-## ➡️ Contributing
+## ➡️ Contribution-Guidelines
 
 ${data.contribution}
 
-## ➡️ Tests
+## ➡️ Test Instructions
 To run tests, you need to run the following command:
 
 ${data.test}
@@ -108,13 +115,14 @@ ${data.test}
 ${licDes}
 [See Details about the ${data.license}-license](${licUrl})
 
-## Questions
+## ➡️ Questions
 
 Please contact me for further Questions:
 
-* [🐈‍ GitHub Profile: ](https://github.com/${data.username})
-* [✉️ Click here to contact me via Email](mailto:${data.email})
+* [🐈‍ GitHub Profile: ](https://github.com/${trimName})
+* [✉️ Click here to contact me via Email](mailto:${trimEmail})
  
+Copyright (c) 2021 ${trimName} Licensed under the ${data.license}-license.
 `;
 }
 
