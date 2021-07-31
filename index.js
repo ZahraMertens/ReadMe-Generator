@@ -147,7 +147,7 @@ function renderFetch (data) {
    .then(output => {
             const licUrl = output.html_url
             const licDes = output.description
-            
+        
            
             if (licUrl === "" && licDes === ""){
                 writeToFile("./Demo/DEMOREADME.md", generateMarkdown(data, "", ""))
