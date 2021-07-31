@@ -2,7 +2,7 @@
 
 ## General Information
 
-
+* [Walkthrough Video of Application with Google Drive](https://drive.google.com/file/d/1vDet_3Nh2rUZ0YIXSnSGSVgD4Foaixjs/view?usp=sharing)
 * [URL of the GitHub Repo](https://github.com/ZahraMertens/ReadMe-Generator.git)
 
 
