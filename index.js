@@ -132,13 +132,7 @@ function writeToFile (fileName, data) {
     })
 }
 
-// TODO: Create a function to initialize app
-function init() {
-    inquirer.prompt(questions)
-    .then(function(data){
-        renderFetch(data)
-    })
-}
+
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
@@ -147,24 +141,35 @@ function init() {
 function renderFetch (data) {
 
     const licenseKind = data.license;
-    console.log(licenseKind);
 
     fetch(`https://api.github.com/licenses/${licenseKind}`)
    .then(res => res.json())
    .then(output => {
-            console.log(output);
             const licUrl = output.html_url
             const licDes = output.description
-            writeToFile("./Demo/DEMOREADME.md", generateMarkdown(data, licUrl, licDes))
+            
            
             if (licUrl === "" && licDes === ""){
                 writeToFile("./Demo/DEMOREADME.md", generateMarkdown(data, "", ""))
-            return ""
-            }
+                return ""
+            } else {
+                writeToFile("./Demo/DEMOREADME.md", generateMarkdown(data, licUrl, licDes))
+            } return licUrl, licDes
         })
         .catch((err) => {
             console.log(err);
   })
+}
+
+// TODO: Create a function to initialize app
+function init() {
+    inquirer.prompt(questions)
+    .then(function(data){
+        renderFetch(data)
+    })
+    .catch((err) => {
+        console.log(err);
+    })
 }
 
 // Function call to initialize app

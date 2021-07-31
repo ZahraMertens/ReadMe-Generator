@@ -1,14 +1,10 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-const Choices = require('inquirer/lib/objects/choices');
-const fetch = require('node-fetch');
-
 
 function renderLicenseBadge(data) {
 
   const licenseType = data.license;
-  console.log(licenseType)
-  
+
   switch (licenseType){
     case "mit": 
       if (licenseType === "mit") {
@@ -39,23 +35,20 @@ function renderLicenseBadge(data) {
         return ""
       }
   }
-  
 }
 
 
 function splitInstallation(data){
-  console.log(data.installation)
-
-  const splitString = data.installation.split(", ")
-  console.log(splitString)
  
-  var test = ""
+  const splitString = data.installation.split(", ")
+ 
+  var listItems = "";
 
   splitString.forEach(function(value){
-    test += `* ${value} \n`
+    listItems += `* ${value} \n`
   })
 
-  return test.trim()
+  return listItems
 }
 
 // TODO: Create a function to generate markdown for README
@@ -67,9 +60,6 @@ function generateMarkdown(data, licUrl, licDes) {
   var trimName = data.username.trim();
   var trimEmail = data.email.trim();
   var trimRepo = data.repo.trim();
-
-  console.log(`"${trimName}"`)
-  console.log(`"${trimEmail}"`)
 
   return `
 
@@ -122,7 +112,7 @@ Please contact me for further Questions:
 * [🐈‍ GitHub Profile: ](https://github.com/${trimName})
 * [✉️ Click here to contact me via Email](mailto:${trimEmail})
  
-Copyright (c) 2021 ${trimName} Licensed under the ${data.license}-license.
+Copyright (c) 2021 ${trimName} Licensed under the ${data.license} license.
 `;
 }
 
