@@ -84,17 +84,17 @@ ${data.description}
 
 ## ➡️ Installation
 
+[🐈‍ GitHub Repository: ](https://github.com/${data.username}/${data.repo})
+
 The following necessary dependencies must be installed to run the application properly: 
 
 ${splitInstall}
 
 ## ➡️ Usage
-​This application is used for:
 
 ${data.usage}
 
 ## ➡️ Contributing
-​Contributors: 
 
 ${data.contribution}
 

@@ -28,6 +28,17 @@ const questions = [{
         }
     },
     {
+        type: 'input',
+        message: 'What is the projects GitHub repository name?',
+        name: 'repo',
+        validate: function (input) {
+            if (input === ""){
+                return "GitHub Repo Name must be entered"
+            } 
+            return true
+        }
+    },
+    {
       type: 'input',
       message: 'What is your project title?',
       name: 'title',
@@ -62,7 +73,7 @@ const questions = [{
     },
     {
         type: 'input',
-        message: 'Enter usage information for te project',
+        message: 'Enter Usage Information for the project: ',
         name: 'usage',
         validate: function (input) {
             if (input === ""){
@@ -73,7 +84,7 @@ const questions = [{
     },
     {
         type: 'input',
-        message: 'Enter contribution guidelines for the project',
+        message: 'Enter Contribution Guidelines for the project',
         name: 'contribution',
         validate: function (input) {
             if (input === ""){
@@ -84,7 +95,7 @@ const questions = [{
     },
     {
         type: 'input',
-        message: 'Enter test intrsuctions for the project',
+        message: 'Enter Test Intrsuctions of the project',
         name: 'test',
         validate: function (input) {
             if (input === ""){
