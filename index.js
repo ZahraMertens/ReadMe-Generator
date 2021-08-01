@@ -9,6 +9,8 @@ const questions = [{
         type: 'input',
         message: 'What is your GitHub username',
         name: 'username',
+        //Validate if input is empty, if empty user can't go to next question
+        //If input valid user goes to next question
         validate: function (input) {
             if (input === ""){
                 return "GitHub username must be entered"
@@ -135,20 +137,21 @@ function writeToFile (fileName, data) {
 
 
 // TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
 // TODO: Create a function that returns the license link
-// If there is no license, return an empty string
 function renderFetch (data) {
 
+    //Get license value from promts
     const licenseKind = data.license;
 
+    //Use node fetch to get license url and description
     fetch(`https://api.github.com/licenses/${licenseKind}`)
    .then(res => res.json())
    .then(output => {
             const licUrl = output.html_url
             const licDes = output.description
         
-           
+            //if no lic Url and des return empty string
+            //Or execute function with parameter licUrl and licDes
             if (licUrl === "" && licDes === ""){
                 writeToFile("./Demo/DEMOREADME.md", generateMarkdown(data, "", ""))
                 return ""
@@ -162,6 +165,7 @@ function renderFetch (data) {
 }
 
 // TODO: Create a function to initialize app
+//Init with promts of questions when all answered go to fetch and generate markdown
 function init() {
     inquirer.prompt(questions)
     .then(function(data){

@@ -1,10 +1,12 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
 
+//Render license badge depending on license type
 function renderLicenseBadge(data) {
 
   const licenseType = data.license;
 
+  //switch statement to return depending on what the license type is
   switch (licenseType){
     case "mit": 
       if (licenseType === "mit") {
@@ -37,18 +39,20 @@ function renderLicenseBadge(data) {
   }
 }
 
-
+//Create list elements of instructions
 function splitInstallation(data){
  
+  //Create array of insructions
   const splitString = data.installation.split(", ")
  
   var listItems = "";
 
+  //Loop over array and append each string to empty string
   splitString.forEach(function(value){
     listItems += `* ${value} \n`
   })
 
-  return listItems
+  return listItems //return list elements
 }
 
 // TODO: Create a function to generate markdown for README
