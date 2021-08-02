@@ -56,6 +56,7 @@ function splitInstallation(data){
   return listItems //return list elements
 }
 
+//Function to render license section depending if license chosen or not
 function renderLicenseSection(data, licUrl, licDes) {
 
   if (licUrl && licDes) {

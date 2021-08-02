@@ -131,7 +131,7 @@ function writeToFile (fileName, data) {
             return console.error(err)
             
         } else {
-            return console.log(`Success ${fileName} has been created!`)
+            return console.log("\x1b[32m", `\n**Success ${fileName} has been created!**\n`)
         }
     })
 }
@@ -144,7 +144,6 @@ function renderFetch (data) {
 
     //Get license value from promts
     const licenseKind = data.license;
-    console.log(licenseKind)
 
     //Use node fetch to get license url and description
     fetch(`https://api.github.com/licenses/${licenseKind}`)
@@ -152,7 +151,6 @@ function renderFetch (data) {
    .then(output => {
             const licUrl = output.html_url
             const licDes = output.description
-            console.log(output)
         
             //if no lic Url and des return empty string
             //Or execute function with parameter licUrl and licDes
