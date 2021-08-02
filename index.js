@@ -54,7 +54,7 @@ const questions = [{
     },
     {
       type: 'input',
-      message: 'Please enter a describtion of the project:',
+      message: 'Please enter a Describtion of the project:',
       name: 'description',
       validate: function (input) {
         if (input === ""){
@@ -65,7 +65,7 @@ const questions = [{
     },
     {
       type: 'input',
-      message: 'Enter installation instructions(Please separate each step by a comma and space (, )',
+      message: 'Enter Installation Instructions (Please separate each step by a comma and space (, )',
       name: 'installation',
       validate: function (input) {
         if (input === ""){
@@ -109,7 +109,7 @@ const questions = [{
     },
     {
         type: "list",
-        message: "Which license would you like to choose for your Project?",
+        message: "Which License would you like to choose for your Project?",
         name: "license",
         choices: [
             {value: "", name: "None"},

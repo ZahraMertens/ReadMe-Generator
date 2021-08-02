@@ -34,6 +34,7 @@ function renderLicenseBadge(data) {
     }
     case "":
       if (licenseType === ""){
+        //if license is none return linebreak to make it look clean
         return "\n"
       }
   }
@@ -60,6 +61,7 @@ function renderLicenseSection(data, licUrl, licDes) {
   if (licUrl && licDes) {
     return `${licDes}\n[See Details about the ${data.license}-license](${licUrl})`
   } else {
+    //Return Badge with no license if no license selected
     return "![License](https://img.shields.io/badge/License-NONE-red.svg)"
   }
 }
