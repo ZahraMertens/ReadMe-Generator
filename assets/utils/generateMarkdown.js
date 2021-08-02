@@ -124,7 +124,7 @@ ${licenseSection}
 
 Please contact me for additional questions:
 
-* [🐈‍ GitHub Profile: ](https://github.com/${trimName})
+* [🐈‍ GitHub Profile](https://github.com/${trimName})
 * [✉️ Click here to contact me via Email (${trimEmail})](mailto:${trimEmail})
  
 Copyright (c) 2021 ${trimName} Licensed under the ${data.license} license.
