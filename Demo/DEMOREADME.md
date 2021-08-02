@@ -3,6 +3,7 @@
 
 
 
+
 ## ➡️ Description
 
 d
@@ -39,7 +40,7 @@ d
 
 ## License
 
-[![License](https://img.shields.io/badge/License-NONE-red.svg)]
+![License](https://img.shields.io/badge/License-NONE-red.svg)
 
 ## Questions
 

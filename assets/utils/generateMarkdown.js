@@ -34,7 +34,7 @@ function renderLicenseBadge(data) {
     }
     case "":
       if (licenseType === ""){
-        return ""
+        return "\n"
       }
   }
 }
@@ -60,7 +60,7 @@ function renderLicenseSection(data, licUrl, licDes) {
   if (licUrl && licDes) {
     return `${licDes}\n[See Details about the ${data.license}-license](${licUrl})`
   } else {
-    return "[![License](https://img.shields.io/badge/License-NONE-red.svg)]"
+    return "![License](https://img.shields.io/badge/License-NONE-red.svg)"
   }
 }
 
