@@ -52,7 +52,7 @@ A short and simple permissive license with conditions only requiring preservatio
 
 Please contact me for additional questions:
 
-* [🐈‍ GitHub Profile: ](https://github.com/ZahraMertens)
+* [🐈‍ GitHub Profile](https://github.com/ZahraMertens)
 * [✉️ Click here to contact me via Email (zahra.mertens@gmx.net)](mailto:zahra.mertens@gmx.net)
  
 Copyright (c) 2021 ZahraMertens Licensed under the mit license.
