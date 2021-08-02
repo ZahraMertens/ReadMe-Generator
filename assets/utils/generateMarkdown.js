@@ -30,7 +30,7 @@ function renderLicenseBadge(data) {
     }
     case "apache-2.0": 
       if (licenseType === "apache-2.0") {
-        return "[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
+        return "[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
     }
     case "":
       if (licenseType === ""){
@@ -55,18 +55,27 @@ function splitInstallation(data){
   return listItems //return list elements
 }
 
+function renderLicenseSection(data, licUrl, licDes) {
+
+  if (licUrl && licDes) {
+    return `${licDes}\n[See Details about the ${data.license}-license](${licUrl})`
+  } else {
+    return "[![License](https://img.shields.io/badge/License-NONE-red.svg)]"
+  }
+}
+
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data, licUrl, licDes) {
 
-  var licenseBadge = renderLicenseBadge(data); 
-  var splitInstall = splitInstallation(data);
+  const licenseBadge = renderLicenseBadge(data); 
+  const splitInstall = splitInstallation(data);
+  const licenseSection = renderLicenseSection(data, licUrl, licDes)
 
   var trimName = data.username.trim();
   var trimEmail = data.email.trim();
   var trimRepo = data.repo.trim();
 
   return `
-
 # ➡️ ${data.title}
 
 ${licenseBadge}
@@ -106,8 +115,7 @@ ${data.test}
 
 ## License
 
-${licDes}
-[See Details about the ${data.license}-license](${licUrl})
+${licenseSection}
 
 ## Questions
 

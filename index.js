@@ -23,10 +23,11 @@ const questions = [{
         message: 'What is your emil address?',
         name: 'email',
         validate: function (input) {
-            if (input === ""){
-                return "Email address must be entered"
-            } 
-            return true
+        //JavaScript regex email validation if input is valid
+        if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(input)){
+            return "You have entered an invalid email address!"
+        }
+        return true
         }
     },
     {
@@ -111,6 +112,7 @@ const questions = [{
         message: "Which license would you like to choose for your Project?",
         name: "license",
         choices: [
+            {value: "", name: "None"},
             {value: "mit", name: "MIT License"},
             {value: "agpl-3.0", name: "GNU Affero General Public License v3.0"},
             {value: "gpl-3.0", name: "GNU General Public License v3.0"},
@@ -142,6 +144,7 @@ function renderFetch (data) {
 
     //Get license value from promts
     const licenseKind = data.license;
+    console.log(licenseKind)
 
     //Use node fetch to get license url and description
     fetch(`https://api.github.com/licenses/${licenseKind}`)
@@ -149,10 +152,11 @@ function renderFetch (data) {
    .then(output => {
             const licUrl = output.html_url
             const licDes = output.description
+            console.log(output)
         
             //if no lic Url and des return empty string
             //Or execute function with parameter licUrl and licDes
-            if (licUrl === "" && licDes === ""){
+            if (licenseKind === ""){
                 writeToFile("./Demo/DEMOREADME.md", generateMarkdown(data, "", ""))
                 return ""
             } else {
